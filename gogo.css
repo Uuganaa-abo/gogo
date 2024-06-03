@@ -385,7 +385,7 @@ section {
     overflow: hidden;
 }
 
-.story-container:hover .story1__img img {
+.story-container:hover .story__img {
     transform: scale(1.2);
 }
 
@@ -393,7 +393,8 @@ section {
     position: relative;
 }
 
-.story1__img img {
+.story__img {
+
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -403,6 +404,8 @@ section {
 
 .story__logo {
     position: absolute;
+    width: 30px;
+    height: 30px;
     top: 10px;
     left: 10px;
     height: 30px;
