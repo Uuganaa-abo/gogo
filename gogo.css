@@ -370,7 +370,6 @@ section {
     gap: 15px;
     width: 1100px;
     height: 235px;
-    border: 1px solid blue;
     margin-bottom: 0px;
 }
 
@@ -452,56 +451,6 @@ section {
     color: white;
     transform: translate(0px, 10%);
     height: 125px;
-}
-
-.story__2 {
-    background-color: aquamarine;
-    gap: 15px;
-    width: 170.8px;
-    height: 235px;
-    border-radius: 5px;
-    border: 1px solid red;
-
-}
-
-.story__3 {
-    background-color: aquamarine;
-    gap: 15px;
-    width: 170.8px;
-    height: 235px;
-    border-radius: 5px;
-    border: 1px solid red;
-
-}
-
-.story__4 {
-    background-color: aquamarine;
-    gap: 15px;
-    width: 170.8px;
-    height: 235px;
-    border-radius: 5px;
-    border: 1px solid red;
-
-}
-
-.story__5 {
-    background-color: aquamarine;
-    gap: 15px;
-    width: 170.8px;
-    height: 235px;
-    border-radius: 5px;
-    border: 1px solid red;
-
-}
-
-.story__6 {
-    background-color: aquamarine;
-    gap: 15px;
-    width: 170.8px;
-    height: 235px;
-    border-radius: 5px;
-    border: 1px solid red;
-
 }
 
 /*End story*/
