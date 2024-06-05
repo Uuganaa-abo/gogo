@@ -585,11 +585,10 @@ section {
 }
 
 .trend-news {
+    margin-top: 50px;
     width: 340px;
     height: 1413.72px;
-    top: 1240px;
     left: -50px;
-    gap: 0px;
     opacity: 0px;
     background: #FDFAF5;
 
@@ -613,6 +612,16 @@ section {
     text-align: left;
 }
 
+.trend-news-posts {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #0000000F width: 270px;
+    height: 134px;
+    top: 87.72px;
+    left: 35px;
+
+}
+
 .trend-news__text {
     display: flex;
     gap: 15px;
@@ -622,7 +631,7 @@ section {
     margin-left: 35px;
     border: 0px 0px 1px 0px;
     opacity: 0px;
-    border-bottom: 1px solid #0000000F
+
 }
 
 .new-text {
@@ -649,6 +658,33 @@ section {
     background: #000000;
 
 }
+
+.news-post__icon {
+    display: flex;
+    gap: 10px;
+    width: 12px;
+    height: 12px;
+    margin-left: 70px;
+    margin-bottom: 23.68px;
+    opacity: 0px;
+    vertical-align: middle;
+    font-family: Helvetica Neue;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+}
+
+.news-post__icon>p {
+    font-family: Helvetica Neue;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+
+}
+
+.trend-news__text {}
 
 #interview {
     display: flex;
