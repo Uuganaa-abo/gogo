@@ -1178,7 +1178,7 @@ section {
     left: 11px;
     border: 1px 0px 0px 0px;
     padding: 10px;
-    border-top: 1px solid #00000008; 
+    border-top: 1px solid #00000008;
     font-family: Helvetica Neue;
     color: #888888;
     font-size: 12px;
@@ -1186,7 +1186,113 @@ section {
     line-height: 20px;
     text-align: left;
 }
-.komic-post__text__icon img{
+
+.komic-post__text__icon img {
     width: 12px;
     height: 12px;
 }
+
+#home-entertainment {
+    margin-top: 150px;
+    max-width: 1920px;
+    height: 767px;
+    background-color: #1a1a1a;
+
+}
+
+.entertainment-container {
+    max-width: 1100px;
+    height: 717.25px;
+    padding-top: 50px;
+}
+
+.entertainment-logo {
+    display: flex;
+    gap: 10px;
+}
+
+.entertainment-logo img {
+    width: 30px;
+    height: 30px;
+}
+
+.entertainment-logo__text {
+    width: 41.87px;
+    height: 30px;
+    margin-top: -5px;
+    font-family: Helvetica Neue;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: left;
+    color: white;
+}
+
+
+#footer {
+    max-width: 1100px;
+    width: 1180px;
+    height: 121.06px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-logo img {
+    width: 120px;
+    height: 39.23px;
+}
+
+.footer-navigation {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-navigation__box {
+    display: flex;
+    gap: 5px;
+}
+
+.footer-navigation__box img {
+    width: 15px;
+    height: 20px;
+}
+
+.footer-navigation__box>p {
+    font-family: Helvetica Neue;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: right;
+    color: #101010;
+    margin-top: -3px;
+}
+
+.holboo-barih {
+    display: flex;
+    gap: 5px;
+}
+
+.holboo-barih img {
+    width: 15px;
+    height: 20px;
+}
+
+.holboo-barih>p {
+    font-family: Helvetica Neue;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: right;
+    color: #101010;
+    margin-top: -3px;
+}
+
+/* .separator {
+    width: 1100px;
+    height: 1px;
+    top: 69.23px;
+    left: 40px;
+    border: 1px 0px 0px 0px;
+    border-top: 1px solid #0000000D
+} */
