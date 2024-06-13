@@ -1261,18 +1261,107 @@ section#home-entertainment {
     color: white;
 }
 
+.entertainment-post {
+    margin-top: 30px;
+    width: 263.75;
+    height: 323px;
+    overflow: hidden;
+    position: relative;
+}
+
+.entertainment-post__image {
+    width: 263.75px;
+    height: 170px;
+    border-radius: 5px 0px 0px 0px;
+    position: relative;
+}
+
+.entertainment-post__image__logo {
+    width: 45px;
+    height: 35.05px;
+}
+
+.entertainment-post__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.entertainment-post__title {
+    box-sizing: border-box;
+    width: 247.11px;
+    height: 66px;
+    font-family: Helvetica Neue;
+    font-size: 13.67px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: left;
+    color: white;
+    margin-top: 10px;
+}
+
+.entertainment-post__image:hover {
+    transform: scale(1.2);
+}
+
+.entertainment-post__image__cover {
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s;
+}
+
+.entertainment-post__image:hover .entertainment-post__image__cover {
+    opacity: 1;
+}
+
+.entertainment-post-icon {
+    display: flex;
+    gap: 30px;
+
+}
+
+.entertainment-post__icon {
+    display: flex;
+    align-items: center;
+}
+
+.entertainment-post__icon img {
+    width: 12px;
+    height: 12px;
+    color: white;
+}
+
+.entertainment-post__icon>p {
+    margin-left: 5px;
+    font-family: Helvetica Neue;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: left;
+    color: white;
+}
+
 
 #footer {
     max-width: 1100px;
     width: 1180px;
     height: 121.06px;
     margin-top: 50px;
-    /* display: flex; */
-    justify-content: space-between;
+    margin-bottom: 50px;
+
 }
 
-#footer div:first-child {
+.footer-container {
     display: flex;
+    justify-content: space-between;
 }
 
 .footer-logo img {
@@ -1308,6 +1397,9 @@ section#home-entertainment {
 .holboo-barih {
     display: flex;
     gap: 5px;
+    justify-content: end;
+    margin-top: 10px;
+
 }
 
 .holboo-barih img {
@@ -1325,11 +1417,37 @@ section#home-entertainment {
     margin-top: -3px;
 }
 
-/* .separator {
-    width: 1100px;
-    height: 1px;
-    top: 69.23px;
-    left: 40px;
+
+.separator {
+    max-width: 1100px;
+    margin-top: 30px;
     border: 1px 0px 0px 0px;
-    border-top: 1px solid #0000000D
-} */
+    border-top: 1px solid #0000000D;
+    display: flex;
+    justify-content: space-between;
+}
+
+.separator__item {
+    font-family: Helvetica Neue;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.separator__social {
+    display: flex;
+    gap: 10px;
+}
+
+.separator__social img {
+    width: 20px;
+    height: 20px;
+    margin-top: 30px;
+}
+
+.separator__social img:hover {
+    cursor: pointer;
+    color: #000;
+}
