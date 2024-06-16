@@ -1,89 +1,1371 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/10.12.2/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/10.12.2/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="gogo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+</head>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+<body>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+    <section id="gogo-news-container">
+        <header class="header-container">
+            <div class="gogo-logo">
+                <a href="https://gogo.mn/">
+                    <img src="gogo-logo.png" class="logo-img" alt="logo">
+                </a>
+            </div>
+            <div class="gogo-navigation">
+                <div class="nav-box">
+                    <div>Мэдээ
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div>Gogo булан
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div>Үзэх
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div>Хэв маяг
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div>English
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="icon-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div class="header-widgets">
+                <div class="widgets">
+                    <a href="https://gogo.mn/">
+                        <div class="Widget-weather">Цаг агаар</div>
+                        <div class="weather-text-item">
+                            <div class="weather-item__icon"> <img src="icon-cloud.438284f4.svg fill.png" alt=""></div>
+                            <div class="weather-item__text">5.23</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="widgets">
+                    <a href="https://gogo.mn/horoscope">
+                        <div class="widget-horoscope">Зурхай</div>
+                        <div class="horoscope-text-item">
+                            <div class="horoscope-item__icon"> <img src="calendar-icon.7e594c4b.svg fill.png"
+                                    alt="calendar"></div>
+                            <div class="horoscope-item__text">5.23</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="widgets">
+                    <a href="https://gogo.mn/exchange">
+                        <div class="widget-exchange">Валютын ханш</div>
+                        <div class="exchange-text-item">
+                            <div class="exchange-item__icon"><i class="fa-solid fa-dollar-sign"></i></div>
+                            <div class="exchange-item__text">5.23</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="menu-bar">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+        </header>
+        <div class="gogo-home-container">
+            <div class="gogo-home-post">
+                <div style="margin-left: 40px;">
+                    <div class="home-post__garchig">Нийгэм</div>
+                    <div style="width: 557.5px;">
+                        <a href="https://gogo.mn/r/qy39m" class="home-post__box">
+                            <div class="home-post__text">Буддын шашинт орнууд Бурхан багшийн их дүйчин өдрийг хэрхэн
+                                тэмдэглэн өнгөрүүлдэг вэ?</div>
+                            <div class="text__title">Өмнөд Солонгос улсад Бурхан багшийн мэндэлсэн өдрийг нийтээр
+                                тэмдэглэх
+                                баярын өдөрт тооцдог. Энэ өдрийн гол үйл ажиллагаа нь Сөүл хотын төвд гэрэлт дэнлүүг
+                                асаах
+                                ёслол байдаг. </div>
+                        </a>
+                        <div class="home-post__box__icon">
+                            <img src="Symbol.png" alt="">12
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 542.5px;">
+                    <a href="https://gogo.mn/r/qy39m" class="home-post__img">
+                        <div class="post__img">
+                            <img src="https://mgl.gogo.mn/newsn/thumbnail/1000/np/2016/05/21/4862970/009_duichinudur-163039-1439390779.jpeg "
+                                alt="">
+                            <div class="img__cover">Дэлгэрэнгүй унших</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="gogo-home-beside">
+                <div>
+                    <a href="https://gogo.mn/r/gn84k" class="home-beside-item">
+                        <div class="beside1__img" style="height: 175px;">
+                            <img src="maratson.png" alt="">
+                            <div class="beside1__cover">Унших</div>
+                        </div>
+                        <div class="beside1-title">Фото сурвалжилга: “Улаанбаатар марафон 2024”</div>
+                        <div class="beside1__share">
+                            <img src="Symbol.png" alt=""> 22
+                            <img src="comment-light.81abc418.svg.png" alt="">11
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://gogo.mn/r/88y7x" class="home-beside-item">
+                        <div class="beside1__img" style="height: 175px;">
+                            <img src="https://mgl.gogo.mn/newsn/thumbnail/1000/images/c/2024/05/319220-25052024-1716613774-1357616215-songuuli.jpg"
+                                alt="">
+                            <div class="beside1__cover">Унших</div>
+                        </div>
+                        <div class="beside1-title">Одоогоор 35 бие даан нэр дэвшигч баримт бичгээ ирүүлжээ</div>
+                        <div class="beside3__share">
+                            <img src="Symbol.png" alt=""> 22
+                            <img src="comment-light.81abc418.svg.png" alt="">11
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://gogo.mn/r/no9v2" class="home-beside-item">
+                        <div class="beside1__img" style="height: 175px;">
+                            <img src="ger bul.png" alt="">
+                            <div class="beside1__cover">Унших</div>
+                        </div>
+                        <div class="beside1-title">ФОТО: Хамтдаа, жаргалтай гэр бүлийн өдөрлөгөөс</div>
+                        <div class="beside2__share">
+                            <img src="Symbol.png" alt=""> 22
+                            <img src="comment-light.81abc418.svg.png" alt="">11
+                        </div>
+                    </a>
+                </div>
+                <div class="usgee-toolj-suray">
+                    <a href="https://www.facebook.com/MaamuuBrand">
+                        <img src="https://mgl.gogo.mn/banner_gogo/banner/2024/04/05/news-b2/videourl/1712289534/B2.png"
+                            alt="">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="gogo-story">
+        <div class="story-logo">
+            <div class="logo__text">
+                GoGo
+                <p class="text__story">стори</p>
+            </div>
+            <div class="story__post">
+                <div style="width: 170px;" class="story-container">
+                    <a href="https://gogo.mn/#modal-story-full">
+                        <div class=" story1__img">
+                            <img src="https://mgl.gogo.mn/newsn/story/cover111-6656c8c286162110286283.jpg" alt=""
+                                class="story__img">
+                            <img src="https://mgl.gogo.mn//newsn/v4/images/author.dece2426.svg" alt="logo"
+                                class="story__logo">
+                            <div class="story__cover"></div>
+                            <div class="story1__img__title">
+                                <p>“Кино бол цогц урлаг, таашаал, зугаа цэнгээн төдийгүй мөн бизнес”</p>
+                            </div>
+                            <div class="story1__veiw">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div style="width: 170px;" class="story-container">
+                    <a href="https://gogo.mn/#modal-story-full">
+                        <div class=" story1__img">
+                            <img src="https://mgl.gogo.mn/newsn/story/lukashenko-ailchlal-hurelsuh-665e7905bd7df852285446.jpg"
+                                alt="" class="story__img">
+                            <img src="https://mgl.gogo.mn//newsn/v4/images/author.dece2426.svg" alt="logo"
+                                class="story__logo">
+                            <div class="story__cover"></div>
+                            <div class="story1__img__title">
+                                <p>ТОЙМ: "Ашиг хайж Монгол Улсад ирээгүй” хэмээсэн Лукашенкогийн айлчлал</p>
+                            </div>
+                            <div class="story1__veiw">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div style="width: 170px;" class="story-container">
+                    <a href="https://gogo.mn/#modal-story-full">
+                        <div class=" story1__img">
+                            <img src="https://mgl.gogo.mn/newsn/story/maw4tre2kzm4pk7b27gnhksa5m-665e78cfe629e580372229.jpg"
+                                alt="" class="story__img">
+                            <img src="https://mgl.gogo.mn//newsn/v4/images/author.dece2426.svg" alt="logo"
+                                class="story__logo">
+                            <div class="story__cover"></div>
+                            <div class="story1__img__title">
+                                <p>Мексик түүхэндээ анх удаа эмэгтэй Ерөнхийлөгчтэй боллоо</p>
+                            </div>
+                            <div class="story1__veiw">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div style="width: 170px;" class="story-container">
+                    <a href="https://gogo.mn/#modal-story-full">
+                        <div class=" story1__img">
+                            <img src="https://mgl.gogo.mn/newsn/story/319492-03062024-1717374214-1562338738-skynews-china-moon-change-6571397-665e78b246a14860602718.jpg"
+                                alt="" class="story__img">
+                            <img src="https://mgl.gogo.mn//newsn/v4/images/author.dece2426.svg" alt="logo"
+                                class="story__logo">
+                            <div class="story__cover"></div>
+                            <div class="story1__img__title">
+                                <p>БНХАУ-ын сансрын хөлөг сарны цаад талд амжилттай газарджээ</p>
+                            </div>
+                            <div class="story1__veiw">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div style="width: 170px;" class="story-container">
+                    <a href="https://gogo.mn/#modal-story-full">
+                        <div class=" story1__img">
+                            <img src="https://mgl.gogo.mn/newsn/story/665d1a0580ae7649f2a46cc7-665d28dd1e6aa284149765.jpg"
+                                alt="" class="story__img">
+                            <img src="https://mgl.gogo.mn//newsn/v4/images/author.dece2426.svg" alt="logo"
+                                class="story__logo">
+                            <div class="story__cover"></div>
+                            <div class="story1__img__title">
+                                <p>“Щелкунчик ба гайхамшгийн орон” медиа арт балетыг төв талбайд тогложээ</p>
+                            </div>
+                            <div class="story1__veiw">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div style="width: 170px;" class="story-container">
+                    <a href="https://gogo.mn/#modal-story-full">
+                        <div class=" story1__img">
+                            <img src="https://mgl.gogo.mn/newsn/story/zura-665d28b12ea37023456476.jpg" alt=""
+                                class="story__img">
+                            <img src="https://mgl.gogo.mn//newsn/v4/images/author.dece2426.svg" alt="logo"
+                                class="story__logo">
+                            <div class="story__cover"></div>
+                            <div class="story1__img__title">
+                                <p>ЗУРХАЙ: Жинлүүрийн ордныхон энэ 7 хоногт сэтгэл хөдлөл, уур бухимдлаа бариарай</p>
+                            </div>
+                            <div class="story1__veiw">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="week-news">
+        <div class="week-news-main">
+            <div class="week-news-calendar">
+                <div class="calendar">
+                    <div class="today">Өнөөдөр
+                        <img src="todaynews.6ba1d8b2.png.png" alt="">
+                    </div>
+                    <div class="day">
+                        <p>6 сарын 16</p>
+                    </div>
+                </div>
+
+                <div class="day" style="margin-top: 39px;">
+                    <p>6 сарын 17</p>
+                </div>
+                <div class="day" style="margin-top: 39px;">
+                    <p>6 сарын 18</p>
+                </div>
+                <div class="day" style="margin-top: 39px;">
+                    <p>6 сарын 19</p>
+                </div>
+                <div class="day" style="margin-top: 39px;">
+                    <p>6 сарын 20</p>
+                </div>
+                <div class="day" style="margin-top: 39px;">
+                    <p>6 сарын 21</p>
+                </div>
+
+            </div>
+
+            <div class="week-news-container">
+                <div class="week-news-post">
+                    <div class="week-news-post__text">
+                        <div class="week-post__image">
+                            <img src="https://mgl.gogo.mn/newsn/thumbnail/1000/images/c/2024/06/319671-07062024-1717726219-1487433587-LAOS1.jpg"
+                                alt="">
+                            <div class="week-post__cover">Унших</div>
+                        </div>
+                        <div style="width: 480px; height: 180px;margin-left: 30px;">
+                            <div class="week-post__text">Лаосын Ерөнхийлөгч Монгол Улсад төрийн айлчлал хийнэ</div>
+                            <div class="week-post__text__title">Монгол Улсын Ерөнхийлөгч У.Хүрэлсүхийн урилгаар Бүгд
+                                Найрамдах
+                                Ардчилсан Лаос Ард Улсын Ерөнхийлөгч Тонглун</div>
+                            <div class="week-post__icon">
+                                <img src="Symbol.png" alt="" style="width: 15px; height: 15px;">11
+                                <img src="time-gray.9703a3cc.svg fill.png" alt=""
+                                    style="width: 15px; height: 15px;margin-left:90px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="week-news-post__text">
+                        <div class="week-post__image">
+                            <img src="https://mgl.gogo.mn/newsn/thumbnail/1000/images/c/2024/06/319610-05062024-1717579246-1387679210-35horoo_avtozam_(5)1.jpg"
+                                alt="">
+                            <div class="week-post__cover">Унших</div>
+                        </div>
+                        <div style="width: 480px; height: 180px;margin-left: 30px;">
+                            <div class="week-post__text">"Хашааныхаа хаалгыг таглуулчхаад бие давхар охиноо эмнэлэгт
+                                ч
+                                хүргэж
+                                чадахгүй байна"</div>
+                            <div class="week-post__text__title">Бид автомашинаа гаргаад хүүхдээ ч сургууль,
+                                цэцэрлэгт хүргэж
+                                өгөлгүй явганаар алхсаар хичээл амарлаа.
+                                Бие
+                            </div>
+                            <div class="week-post__icon">
+                                <img src="Symbol.png" alt="" style="width: 15px; height: 15px;">11
+                                <img src="time-gray.9703a3cc.svg fill.png" alt=""
+                                    style="width: 15px; height: 15px;margin-left:90px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="week-news-post__text">
+                        <div class="week-post__image">
+                            <img src="https://mgl.gogo.mn/newsn/thumbnail/1000/images/c/2024/06/319677-07062024-1717728627-1822144473-Zaisan_toiruu.jpg"
+                                alt="">
+                            <div class="week-post__cover">Унших</div>
+                        </div>
+                        <div style="width: 480px; height: 180px;margin-left: 30px;">
+                            <div class="week-post__text">Зайсан тойруугийн замын хөдөлгөөнийг өнөөдрөөс ХУУЧИН
+                                ЗОХИЦУУЛАЛТААР
+                                явуулна</div>
+                            <div class="week-post__text__title">Гэвч Зайсан тойруу орчимд амьдардаг иргэдээс тус
+                                шийдвэрийг
+                                цуцлах албан бичиг ирүүлжээ.
+                            </div>
+                            <div class="week-post__icon">
+                                <img src="Symbol.png" alt="" style="width: 15px; height: 15px;">11
+                                <img src="time-gray.9703a3cc.svg fill.png" alt=""
+                                    style="width: 15px; height: 15px;margin-left:90px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="width: 690px; height: 245px;">
+                        <img src="https://mgl.gogo.mn/banner_gogo/banner/2024/06/05/news-b3/videourl/1717556788/%D0%A5%D1%8F%D0%BC%D0%B4%D1%80%D0%B0%D0%BB%20%D0%BC%D0%B0%D0%B0%D0%BC%D1%83%D1%83%20%20760%D1%85270%20%D0%913%20%D0%B1%D0%B0%D0%BD%D0%BD%D0%B5%D1%80.jpg"
+                            alt="">
+                    </div>
+                    <div class="week-news-post__text">
+                        <div class="week-post__image">
+                            <img src="https://mgl.gogo.mn/newsn/thumbnail/1000/images/c/2022/09/298303-25092022-1664078649-733470603-automashinguidur_gudamj_ulaanbaatar_huuhduud-41.jpg"
+                                alt="">
+                            <div class="week-post__cover">Унших</div>
+                        </div>
+                        <div style="width: 480px; height: 180px;margin-left: 30px;">
+                            <div class="week-post__text">Улаанбаатарт +25...+27 хэм дулаан</div>
+                            <div class="week-post__text__title">Нутгийн хойд хэсгээр солигдмол үүлтэй. Алтай,
+                                Хангай,
+                                Хөвсгөл,
+                                Хэнтийн уулархаг нутгаар бороо, дуу цахилгаантай аадар бороо орно.
+                            </div>
+                            <div class="week-post__icon">
+                                <img src="Symbol.png" alt="" style="width: 15px; height: 15px;">11
+                                <img src="time-gray.9703a3cc.svg fill.png" alt=""
+                                    style="width: 15px; height: 15px;margin-left:90px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="week-news-post__text">
+                        <div class="week-post__image">
+                            <img src="https://mgl.gogo.mn/newsn/thumbnail/1000/images/c/2024/06/-07062024-1717755482-366946326-7975af03-a3d1-489e-8225-9f9c0394f7b9.jpg"
+                                alt="">
+                            <div class="week-post__cover">Унших</div>
+                        </div>
+                        <div style="width: 480px; height: 180px;margin-left: 30px;">
+                            <div class="week-post__text">Гар утсан дээрх ажлын App-уудаа устгахаас таны амралт
+                                эхэлнэ</div>
+                            <div class="week-post__text__title">Амралт нь хүний сайн сайхан байдал, эрүүл мэндэд дэм
+                                үзүүлээд
+                                зогсохгүй стресс, ажлаас халшрах хам шинжийн эрсдэлийг бууруулахад тустай.
+                            </div>
+                            <div class="week-post__icon">
+                                <img src="Symbol.png" alt="" style="width: 15px; height: 15px;">11
+                                <img src="time-gray.9703a3cc.svg fill.png" alt=""
+                                    style="width: 15px; height: 15px;margin-left:90px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="week-news-post__text">
+                        <div class="week-post__image">
+                            <img src="https://mgl.gogo.mn/newsn/thumbnail/1000/images/c/2024/06/319692-07062024-1717754372-1102463708-ot_(9)1.jpg"
+                                alt="">
+                            <div class="week-post__cover">Унших</div>
+                        </div>
+                        <div style="width: 480px; height: 180px;margin-left: 30px;">
+                            <div class="week-post__text">Байгаль хамгаалагчид туршлагаа хуваалцаж, хариуцлагатай уул
+                                уурхайг
+                                хөгжүүлэхэд нэг шат ахив</div>
+                            <div class="week-post__text__title">Дөчин байгаль хамгаалагч дөрвөн сарын турш туршлагаа
+                                хуваалцсан
+                                энэхүү хөтөлбөрийн хаалт өнөөдөр болов.
+                            </div>
+                            <div class="week-post__icon">
+                                <img src="Symbol.png" alt="" style="width: 15px; height: 15px;">11
+                                <img src="time-gray.9703a3cc.svg fill.png" alt=""
+                                    style="width: 15px; height: 15px;margin-left:90px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="week-news-post__text">
+                        <div class="week-post__image">
+                            <img src="https://mgl.gogo.mn/newsn/thumbnail/1000/images/c/2024/06/319664-07062024-1717697277-1488294709-Untitled_image_(1)1.jpeg"
+                                alt="">
+                            <div class="week-post__cover">Унших</div>
+                        </div>
+                        <div style="width: 480px; height: 180px;margin-left: 30px;">
+                            <div class="week-post__text">Б.Батчимэг: Саналаа өгөхгүй бол сайхан амьдрах боломжуудаа
+                                алдана
+                            </div>
+                            <div class="week-post__text__title">Өмнө нь нэр дэвшигч аймагтаа өөрийгөө таниулан
+                                сурталчлах,
+                                эсвэл
+                                сонгогдох тойрогтоо л ажилладаг байсан. Харин одоо
+                            </div>
+                            <div class="week-post__icon">
+                                <img src="Symbol.png" alt="" style="width: 15px; height: 15px;">11
+                                <img src="time-gray.9703a3cc.svg fill.png" alt=""
+                                    style="width: 15px; height: 15px;margin-left:90px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="week-news-post__text">
+                        <div class="week-post__image">
+                            <img src="https://mgl.gogo.mn/newsn/thumbnail/1000/np/2024/02/29/5209745/Tsagdaa_-10-145539-2617669691.jpeg"
+                                alt="">
+                            <div class="week-post__cover">Унших</div>
+                        </div>
+                        <div style="width: 480px; height: 180px;margin-left: 30px;">
+                            <div class="week-post__text">Цагдаа үйлдвэрчний эвлэлийн гишүүн байх нь хууль зөрчсөн,
+                                эсэхийг
+                                хэлэлцэнэ</div>
+                            <div class="week-post__text__title">УИХ-ын чуулганы энэ сарын 5-ны хуралдаанаар Үндсэн
+                                хуулийн
+                                цэцийн 2024 оны 02 дугаар дүгнэлтийг хэлэлцсэн.
+                            </div>
+                            <div class="week-post__icon">
+                                <img src="Symbol.png" alt="" style="width: 15px; height: 15px;">11
+                                <img src="time-gray.9703a3cc.svg fill.png" alt=""
+                                    style="width: 15px; height: 15px;margin-left:90px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="week-news-post__text">
+                        <div class="week-post__image">
+                            <img src="https://mgl.gogo.mn/newsn/thumbnail/1000/images/c/2024/06/319699-07062024-1717747283-934754470-mandahnaran_gg.jpg"
+                                alt="">
+                            <div class="week-post__cover">Унших</div>
+                        </div>
+                        <div style="width: 480px; height: 180px;margin-left: 30px;">
+                            <div class="week-post__text">А.Мандахнаран: Жижиг, дунд бизнес эрхлэгчид төрийн
+                                дэмжлэгийн гадна
+                                байна</div>
+                            <div class="week-post__text__title">Санхүүч, эдийн засагч Алтансүхийн Мандахнарантай
+                                ярилцлаа.
+                                Түүний хувьд инженерийн гэр бүлээс гаралтай нэгэн. Төр, хувийн
+                            </div>
+                            <div class="week-post__icon">
+                                <img src="Symbol.png" alt="" style="width: 15px; height: 15px;">11
+                                <img src="time-gray.9703a3cc.svg fill.png" alt=""
+                                    style="width: 15px; height: 15px;margin-left:90px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="week-news-post__text">
+                        <div class="week-post__image">
+                            <img src="https://mgl.gogo.mn/newsn/thumbnail/1000/images/c/2024/06/319700-07062024-1717746898-2055215614-597cf291-855b-44a2-9ee9-1621bd133de0.jpg"
+                                alt="">
+                            <div class="week-post__cover">Унших</div>
+                        </div>
+                        <div style="width: 480px; height: 180px;margin-left: 30px;">
+                            <div class="week-post__text">АНУ-ын экспорт, импортын зөрүү IV сард $74.6 тэрбум болж,
+                                8.7
+                                хувиар
+                                өсөв</div>
+                            <div class="week-post__text__title">АНУ-ын экспорт, импортын зөрүү дөрөвдүгээр сард 74.6
+                                тэрбум
+                                ам.доллар болж, 2022 оны аравдугаар сараас хойш байгаагүй
+                            </div>
+                            <div class="week-post__icon">
+                                <img src="Symbol.png" alt="" style="width: 15px; height: 15px;">11
+                                <img src="time-gray.9703a3cc.svg fill.png" alt=""
+                                    style="width: 15px; height: 15px;margin-left:90px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="week-news-post__text">
+                        <div class="week-post__image">
+                            <img src="https://mgl.gogo.mn/newsn/thumbnail/1000/images/c/2024/06/319698-07062024-1717745351-563694363-cover.jpg"
+                                alt="">
+                            <div class="week-post__cover">Унших</div>
+                        </div>
+                        <div style="width: 480px; height: 180px;margin-left: 30px;">
+                            <div class="week-post__text">М лояалти хөтөлбөрөөр санхүүгийн эрүүл мэндээ дэмжээрэй
+                            </div>
+                            <div class="week-post__text__title">Өдөр тутмын төлбөр тооцоо, хэрэгцээт төлөлтүүдээ М
+                                банкаар
+                                төлөөд олон төрлийн урамшууллын эзэн болоорой.
+                            </div>
+                            <div class="week-post__icon">
+                                <img src="Symbol.png" alt="" style="width: 15px; height: 15px;">11
+                                <img src="time-gray.9703a3cc.svg fill.png" alt=""
+                                    style="width: 15px; height: 15px;margin-left:90px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="week-news-post__text">
+                        <div class="week-post__image">
+                            <img src="https://mgl.gogo.mn/newsn/thumbnail/1000/images/c/2023/06/307076-05062023-1685938319-1622116870-songuuliin_horoo.jpeg"
+                                alt="">
+                            <div class="week-post__cover">Унших</div>
+                        </div>
+                        <div style="width: 480px; height: 180px;margin-left: 30px;">
+                            <div class="week-post__text">Нэр дэвшигчдийн үнэмлэхийг даваа гаргаас олгож, нийтэд
+                                мэдээлнэ
+                            </div>
+                            <div class="week-post__text__title">Нэр дэвшигчийн үнэмлэхийг 19 нам, 2 эвслийн төлөөлөл
+                                тухайн
+                                өдрийн 08.00 цагаас эхлэн хүлээн авна. Бие даан нэр дэвшигчдийн
+                            </div>
+                            <div class="week-post__icon">
+                                <img src="Symbol.png" alt="" style="width: 15px; height: 15px;">11
+                                <img src="time-gray.9703a3cc.svg fill.png" alt=""
+                                    style="width: 15px; height: 15px;margin-left:90px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="week-news-post__text">
+                        <div class="week-post__image">
+                            <img src="https://mgl.gogo.mn/newsn/thumbnail/1000/images/c/2024/06/319695-07062024-1717742261-1965101808-66628f9580ae7649f2a46d42.jpg"
+                                alt="">
+                            <div class="week-post__cover">Унших</div>
+                        </div>
+                        <div style="width: 480px; height: 180px;margin-left: 30px;">
+                            <div class="week-post__text">“Франц хэлтнүүдийн хотхон” соёл, аялал жуулчлалын өдөрлөг
+                                маргааш
+                                болно
+                            </div>
+                            <div class="week-post__text__title">Нийслэлийн Аялал жуулчлалын газар, Монгол-Францын
+                                төвтэй
+                                хамтран
+                                франц хэлтэн орнуудын хэл, соёлыг түгээн дэлгэрүүлэх зорилгоор
+                            </div>
+                            <div class="week-post__icon">
+                                <img src="Symbol.png" alt="" style="width: 15px; height: 15px;">11
+                                <img src="time-gray.9703a3cc.svg fill.png" alt=""
+                                    style="width: 15px; height: 15px;margin-left:90px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="week-news-post__text">
+                        <div class="week-post__image">
+                            <img src="https://mgl.gogo.mn/newsn/thumbnail/1000/images/c/2024/06/319696-07062024-1717742628-781678938-nuur_zurag.jpg"
+                                alt="">
+                            <div class="week-post__cover">Унших</div>
+                        </div>
+                        <div style="width: 480px; height: 180px;margin-left: 30px;">
+                            <div class="week-post__text">Голомт банк ЭМЯ-тай хамтран ажиллаж, “ЭМЧ” карт нэвтрүүлнэ
+                            </div>
+                            <div class="week-post__text__title">Голомт банк эрүүл мэндийн салбарт банкны
+                                бүтээгдэхүүн
+                                үйлчилгээг
+                                нэвтрүүлж, дижитал шилжилтийг эрчимжүүлэх зорилгоор
+                            </div>
+                            <div class="week-post__icon">
+                                <img src="Symbol.png" alt="" style="width: 15px; height: 15px;">11
+                                <img src="time-gray.9703a3cc.svg fill.png" alt=""
+                                    style="width: 15px; height: 15px;margin-left:90px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="week-news-post__text">
+                        <div class="week-post__image">
+                            <img src="https://mgl.gogo.mn/newsn/thumbnail/1000/images/c/2024/06/319694-07062024-1717741304-1720914703-naadamchdiin_guur.jpg"
+                               alt="">
+                            <div class="week-post__cover">Унших</div>
+                        </div>
+                        <div style="width: 480px; height: 180px;margin-left: 30px;">
+                            <div class="week-post__text">Монголын анхны дүүжин буюу татлагат гүүрийг 74 сая
+                                ам.доллароор
+                                барина
+                            </div>
+                            <div class="week-post__text__title">Зам, тээврийн хөгжлийн яамны захиалгаар хийж буй
+                                Туулын авто
+                                замыг нисэхийн хурдны авто замтай холбох “Наадамчдын гүүр”
+                            </div>
+                            <div class="week-post__icon">
+                                <img src="Symbol.png" alt="" style="width: 15px; height: 15px;">11
+                                <img src="time-gray.9703a3cc.svg fill.png" alt=""
+                                    style="width: 15px; height: 15px;margin-left:90px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uzeh">
+                        <p>Цааш үзэх
+                            <img src="more.50d348c2.png.png" alt="">
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="special-news-container">
+            <div class="special-news__post">
+                <div class="garchig">
+                    <img src="mod-logo.png" alt="">
+                    Онцлох мэдээ
+                </div>
+                <div class="post-container">
+                    <div class="post-item">
+                        <div class="post-item__image">
+                            <img src="https://mgl.gogo.mn/newsn/thumbnail/1000/images/c/2024/06/-03062024-1717374473-1872559930-zurkhai1.jpg"
+                                alt="">
+                            <div class="post-item__cover"> Унших</div>
+                        </div>
+                        <div class="post__title">ЗУРХАЙ: Жинлүүрийн ордныхон энэ 7 хоногт сэтгэл хөдлөл, уур
+                            бухимдлаа
+                            бариарай.</div>
+                        <div class="post__icon">
+                            <img src="Symbol.png" alt="">
+                            <div class="post-icon__time">
+                                <img src="time-gray.9703a3cc.svg fill.png" alt="">
+                                3 цагийн өмнө
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-item">
+                        <div class="post-item__image">
+                            <img src="https://mgl.gogo.mn/newsn/thumbnail/420/images/c/2023/01/302404-20012023-1674199189-1266753636-Munkhnasan.jpg"
+                                alt="">
+                            <div class="post-item__cover"> Унших</div>
+                        </div>
+                        <div class="post__title">Н.Мөнхнасан: Манай бүх компанийн дансыг хаажээ. 1300 ажилтныхаа
+                            цалинг
+                            яаж тавих вэ?</div>
+                        <div class="post__icon">
+                            <img src="Symbol.png" alt="">
+                            <div class="post-icon__time">
+                                <img src="time-gray.9703a3cc.svg fill.png" alt="">
+                                3 цагийн өмнө
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-item">
+                        <div class="post-item__image">
+                            <img src="https://mgl.gogo.mn/newsn/thumbnail/1000/images/c/2024/06/-03062024-1717379454-1155932069-undesnii_tsetserlegt_gureelen_hyars_hyrs_guruus_tuulai_zaraa1.jpg"
+                                alt="">
+                            <div class="post-item__cover"> Унших</div>
+                        </div>
+                        <div class="post__title">Үндэсний цэцэрлэгт хүрээлэнгийн мэрэгчидтэй тэмцдэг байгаль
+                            хамгаалагч
+                            бол хярс юм</div>
+                        <div class="post__icon">
+                            <img src="Symbol.png" alt="">
+                            <div class="post-icon__time">
+                                <img src="time-gray.9703a3cc.svg fill.png" alt="">
+                                3 цагийн өмнө
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-item">
+                        <div class="post-item__image">
+                            <img src="https://mgl.gogo.mn/newsn/thumbnail/1000/images/c/2024/06/319490-03062024-1717372434-107157027-446856833_859831926176433_5179443915784019344_n.jpg"
+                                alt="">
+                            <div class="post-item__cover"> Унших</div>
+                        </div>
+                        <div class="post__title">The Mongolz "MESA Nomadic Masters" тэмцээнд түрүүлж $50,000
+                            шагнал
+                            авлаа</div>
+                        <div class="post__icon">
+                            <img src="Symbol.png" alt="">
+                            <div class="post-icon__time">
+                                <img src="time-gray.9703a3cc.svg fill.png" alt="">
+                                3 цагийн өмнө
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="trend-news">
+                <div class="trend-medee-garchig">
+                    <img src="trend.43e0b806.png.png" alt="">
+                    Тренд мэдээ
+                </div>
+                <div class="trend-news-posts">
+                    <div class="trend-news__text">
+                        <div class="new-text">1</div>
+                        <p>Уулчин залуус хөтөчгүйгээр
+                            Эверестийн оргилд гарч чадсан нь
+                            гэрэл зураг, дүрс бичлэгээр
+                            нотлогджээ
+                        </p>
+                    </div>
+                    <div class="news-post__icon" style="width: 300px;">
+                        <img src="https://mgl.gogo.mn//newsn/v4/images/comment-light.81abc418.svg" alt="">11
+                        <img src="https://mgl.gogo.mn//newsn/v4/images/time-gray.9703a3cc.svg" alt="">3 цагийн
+                        өмнө
+                    </div>
+                </div>
+                <div class="trend-news-posts">
+                    <div class="trend-news__text">
+                        <div class="new-text">2</div>
+                        <p>Everest today: Бид
+                            Л.Пүрэвсүрэнгийн цогцсыг олсон
+                            тухай эмгэнэлт мэдээг хуваалцаж
+                            байна
+                        </p>
+                    </div>
+                    <div class="news-post__icon" style="width: 300px;">
+                        <img src="https://mgl.gogo.mn//newsn/v4/images/comment-light.81abc418.svg" alt="">11
+                        <img src="https://mgl.gogo.mn//newsn/v4/images/time-gray.9703a3cc.svg" alt="">3 цагийн
+                        өмнө
+                    </div>
+                </div>
+                <div class="trend-news-posts">
+                    <div class="trend-news__text">
+                        <div class="new-text">3</div>
+                        <p>Дараах замыг энэ сарын 21-нийг
+                            хүртэл хаана
+                        </p>
+                    </div>
+                    <div class="news-post__icon" style="width: 300px;">
+                        <img src="https://mgl.gogo.mn//newsn/v4/images/comment-light.81abc418.svg" alt="">11
+                        <img src="https://mgl.gogo.mn//newsn/v4/images/time-gray.9703a3cc.svg" alt="">3 цагийн
+                        өмнө
+                    </div>
+                </div>
+                <div class="trend-news-posts">
+                    <div class="trend-news__text">
+                        <div class="new-text">4</div>
+                        <p>Хоолны жор: Зөөлөн, шүүслэг
+                            шорлог хийх арга
+                        </p>
+                    </div>
+                    <div class="news-post__icon" style="width: 300px;">
+                        <img src="https://mgl.gogo.mn//newsn/v4/images/comment-light.81abc418.svg" alt="">11
+                        <img src="https://mgl.gogo.mn//newsn/v4/images/time-gray.9703a3cc.svg" alt="">3 цагийн
+                        өмнө
+                    </div>
+                </div>
+                <div class="trend-news-posts">
+                    <div class="trend-news__text">
+                        <div class="new-text">5</div>
+                        <p>Б.Баасанхүү жүдо бөхийн дэлхийн
+                            аварга боллоо
+                        </p>
+                    </div>
+                    <div class="news-post__icon" style="width: 300px;">
+                        <img src="https://mgl.gogo.mn//newsn/v4/images/comment-light.81abc418.svg" alt="">11
+                        <img src="https://mgl.gogo.mn//newsn/v4/images/time-gray.9703a3cc.svg" alt="">3 цагийн
+                        өмнө
+                    </div>
+                </div>
+                <div class="trend-news-posts">
+                    <div class="trend-news__text">
+                        <div class="new-text">6</div>
+                        <p>Рэйчел Эваник: Монголд ирээд
+                            төрсөн сэтгэгдэл Ангараг гараг
+                            дээр буусан юм шиг л санагдсан
+                        </p>
+                    </div>
+                    <div class="news-post__icon" style="width: 300px;">
+                        <img src="https://mgl.gogo.mn//newsn/v4/images/comment-light.81abc418.svg" alt="">11
+                        <img src="https://mgl.gogo.mn//newsn/v4/images/time-gray.9703a3cc.svg" alt="">3 цагийн
+                        өмнө
+                    </div>
+                </div>
+                <div class="trend-news-posts">
+                    <div class="trend-news__text">
+                        <div class="new-text">7</div>
+                        <p>Маргааш цахилгаан хязгаарлах
+                            хуваарь
+                        </p>
+                    </div>
+                    <div class="news-post__icon" style="width: 300px;">
+                        <img src="https://mgl.gogo.mn//newsn/v4/images/comment-light.81abc418.svg" alt="">11
+                        <img src="https://mgl.gogo.mn//newsn/v4/images/time-gray.9703a3cc.svg" alt="">3 цагийн
+                        өмнө
+                    </div>
+                </div>
+                <div class="trend-news-posts">
+                    <div class="trend-news__text">
+                        <div class="new-text">8</div>
+                        <p>Эрт илрүүлэг хийж буй эрүүл
+                            мэндийн байгууллагуудын
+                            жагсаалт
+                        </p>
+                    </div>
+                    <div class="news-post__icon" style="width: 300px;">
+                        <img src="https://mgl.gogo.mn//newsn/v4/images/comment-light.81abc418.svg" alt="">11
+                        <img src="https://mgl.gogo.mn//newsn/v4/images/time-gray.9703a3cc.svg" alt="">3 цагийн
+                        өмнө
+                    </div>
+                </div>
+                <div class="trend-news-posts">
+                    <div class="trend-news__text">
+                        <div class="new-text">9</div>
+                        <p>Б.Ганболд: Монголын сэтгүүл зүйд
+                            Г.Отгонбаярын орон зай онгорхой
+                            хэвээрээ байна
+                        </p>
+                    </div>
+                    <div class="news-post__icon" style="width: 300px;">
+                        <img src="https://mgl.gogo.mn//newsn/v4/images/comment-light.81abc418.svg" alt="">11
+                        <img src="https://mgl.gogo.mn//newsn/v4/images/time-gray.9703a3cc.svg" alt="">3 цагийн
+                        өмнө
+                    </div>
+                </div>
+                <div class="trend-news-posts">
+                    <div class="trend-news__text">
+                        <div class="new-text">10</div>
+                        <p style="margin-left: 20px;">Зөрчилтэй, зөвшөөрөлгүй
+                            барилгуудыг буулгахдаа “Богд
+                            Зонхова”-г үлдээв ээ!
+                        </p>
+                    </div>
+                    <div class="news-post__icon" style="width: 300px;">
+                        <img src="https://mgl.gogo.mn//newsn/v4/images/comment-light.81abc418.svg" alt="">11
+                        <img src="https://mgl.gogo.mn//newsn/v4/images/time-gray.9703a3cc.svg" alt="">3 цагийн
+                        өмнө
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="interview">
+        <div class="interview-logo">
+            <img src="https://mgl.gogo.mn//newsn/v4/images/interview.b47c0f6b.png" style="width: 20px; height: 20px;"
+                alt=""> Ярилцлага
+        </div>
+        <div class="interview-container">
+            <div class="interview-big">
+                <div class=" big__image">
+                    <img src="https://mgl.gogo.mn/newsn/thumbnail/1000/images/c/2024/06/319477-01062024-1717254979-1198752746-cafe11.jpg"
+                        alt="">
+                </div>
+                <div class="big-image__text">
+                    <div class="big-text__logo"> GOGO CAFE </div>
+                    <div class="big__text">Ц.Эрдэнэбат: Технологийг хэн эзэмшиж, зөв ашиглаж, бүтээж байна, тэр улс л
+                        хөгжиж байна
+                    </div>
+                    <div class="big-image__cover">Дэлгэрэнгүй
+                        <img src="SVG.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="interview-small4">
+                <div class="small">
+                    <div class="interview-small">
+                        <div class="small-image">
+                            <img src="https://mgl.gogo.mn/newsn/thumbnail/600/images/c/2024/05/319045-21052024-1716251435-988856390-shatsanbarilga_dunjigarav_galdavtsanbarilga-5-155756-13325088311.jpeg"
+                                alt="">
+                        </div>
+                        <div class="small-post">
+                            <div class="small-post__logo">Гутал</div>
+                            <div class="small-post__text">ГУТАЛ #27: Түүнд одоо орон гэр, унаа тэрэг байхгүй,
+                                байгаагаас ипотекийн зээл л үлджээ
+                            </div>
+                        </div>
+                    </div>
+                    <div class="interview-small">
+                        <div class="small-image">
+                            <img src="https://mgl.gogo.mn/newsn/thumbnail/600/images/c/2024/05/318606-07052024-1715062467-673307045-414706383_122146674050023665_4489857163949139215_n.jpg"
+                                alt="">
+                        </div>
+                        <div class="small-post">
+                            <div class="small-post__logo" style="width: 70px;">Хүний түүх</div>
+                            <div class="small-post__text">Б.Даваадорж: Бүрэн зэвсэглэсэн талибанчууд “Нааш ир” гэхэд
+                                надад очихоос өөр сонголт байгаагүй
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="small">
+                <div class="interview-small">
+                    <div class="small-image">
+                        <img src="https://mgl.gogo.mn/newsn/thumbnail/600/images/c/2024/05/318590-06052024-1714983747-1094992622-elcin_said_(11)1.jpg"
+                            alt="">
+                    </div>
+                    <div class="small-post">
+                        <div class="small-post__logo" style="width: 70px;">Элчин сайд</div>
+                        <div class="small-post__text">ОХУ-ын Элчин сайд Алексей Николаевич Евсиков: “Роснефть”-ээс гадна
+                            ОХУ-ын таван компани Монголд нефть нийлүүлэхэд бэлэн
+                        </div>
+                    </div>
+                </div>
+                <div class="interview-small">
+                    <div class="small-image">
+                        <img src="https://mgl.gogo.mn/newsn/thumbnail/600/images/c/2024/05/318699-09052024-1715225876-1715075915-Tumursukh_zurag1.jpg"
+                            alt="">
+                    </div>
+                    <div class="small-post" style="margin-top: -70px;">
+                        <div class="small-post__logo" style="width: 70px;">Хүний түүх</div>
+                        <div class="small-post__text">ХӨРӨГ: Улаан тайгын Ж.Төмөрсүх
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+    </section>
+    <section id="hew-mayag" style="margin-top: 60px;">
+        <div class="hew-mayag__logo">GoGo
+            <p>ХЭВ МАЯГ</p>
+        </div>
+        <div class="hew-mayag-container">
+            <div class="hew-mayag-box">
+                <div class="hew-mayag__image">
+                    <img src="https://mgl.gogo.mn/newsn/thumbnail/510/images/c/2024/06/-07062024-1717755482-366946326-7975af03-a3d1-489e-8225-9f9c0394f7b9.jpg"
+                        alt="">
+                    <div class="hew-mayag__cover">Унших</div>
+                </div>
+                <div class="hew-mayag__post__item">
+                    <div class="hew-mayag__post__text">Гар утсан дээрх ажлын App-уудаа устгахаас таны амралт эхэлнэ
+                    </div>
+                    <div class="hew-mayag__post__text__icon">
+                        <img src="Symbol.png" alt="">11
+                        <img src="comment-light.81abc418.svg.png" style="margin-left: 76px;" alt="">12
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="hew-mayag-box">
+                <div class="hew-mayag__image">
+                    <img src="https://mgl.gogo.mn/newsn/thumbnail/510/images/c/2020/05/256004-22052020-1590128560-327896478-thumbnail_Burger_&_burger_buns.jpg"
+                        alt="">
+                    <div class="hew-mayag__cover">Унших</div>
+                </div>
+                <div class="hew-mayag__post__item">
+                    <div class="hew-mayag__post__text">Турмериктэй амтат бургер болон талх хийх арга
+                    </div>
+                    <div class="hew-mayag__post__text__icon">
+                        <img src="Symbol.png" alt="">11
+                        <img src="comment-light.81abc418.svg.png" style="margin-left: 76px;" alt="">12
+                    </div>
+
+                </div>
+            </div>
+            <div class="hew-mayag-box">
+                <div class="hew-mayag__image">
+                    <img src="https://mgl.gogo.mn/newsn/thumbnail/510/images/c/2020/10/262567-16102020-1602841039-1600603063-thumbnail_1382539982692.jpg"
+                        alt="">
+                    <div class="hew-mayag__cover">Унших</div>
+                </div>
+                <div class="hew-mayag__post__item">
+                    <div class="hew-mayag__post__text">Хоолны жор: Крем брулээ хийцгээе
+                    </div>
+                    <div class="hew-mayag__post__text__icon">
+                        <img src="Symbol.png" alt="">11
+                        <img src="comment-light.81abc418.svg.png" style="margin-left: 76px;" alt="">12
+                    </div>
+
+                </div>
+            </div>
+            <div class="hew-mayag-box">
+                <div class="hew-mayag__image">
+                    <img src="https://mgl.gogo.mn/newsn/thumbnail/510/images/c/2024/05/318942-17052024-1715903158-1775146396-zurag-161.jpg"
+                        alt="">
+                    <div class="hew-mayag__cover">Унших</div>
+                </div>
+                <div class="hew-mayag__post__item">
+                    <div class="hew-mayag__post__text">Рэйчел Эваник: Монголд ирээд төрсөн сэтгэгдэл Ангараг гараг дээр
+                        буусан юм шиг л санагдсан
+                    </div>
+                    <div class="hew-mayag__post__text__icon">
+                        <img src="Symbol.png" alt="">11
+                        <img src="comment-light.81abc418.svg.png" style="margin-left: 76px;" alt="">12
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <section id="hew-mayag" style="margin-top: 60px;">
+        <div class="hew-mayag__logo">
+            <img src="https://mgl.gogo.mn//newsn/v4/images/tech.a4b28dbb.png" alt="">
+            <b style="margin-left: 10px;">Технологи</b>
+        </div>
+        <div class="hew-mayag-container">
+            <div class="hew-mayag-box">
+                <div class="hew-mayag__image">
+                    <img src="https://mgl.gogo.mn/newsn/thumbnail/420/images/c/2024/06/319787-11062024-1718085886-591620986-Apple_1.jpg"
+                        alt="">
+                    <div class="hew-mayag__cover">Унших</div>
+                </div>
+                <div class="hew-mayag__post__item">
+                    <div class="hew-mayag__post__text">“Apple” удаан хүлээлгэсэн хиймэл оюуны функцүүд, “Apple
+                        Intelligence” платформоо танилцууллаа
+                    </div>
+                    <div class="hew-mayag__post__text__icon">
+                        <img src="Symbol.png" alt="">11
+                        <img src="comment-light.81abc418.svg.png" style="margin-left: 76px;" alt="">12
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="hew-mayag-box">
+                <div class="hew-mayag__image">
+                    <img src="https://mgl.gogo.mn/newsn/thumbnail/420/images/c/2024/06/319642-06062024-1717654911-977964033-DSC_4626.jpg"
+                        alt="">
+                    <div class="hew-mayag__cover">Унших</div>
+                </div>
+                <div class="hew-mayag__post__item">
+                    <div class="hew-mayag__post__text">Хулгайн утас худалдан авах гэж буй эсэхээ E-Mongolia-с мэдэх
+                        боломжтой
+                    </div>
+                    <div class="hew-mayag__post__text__icon">
+                        <img src="Symbol.png" alt="">11
+                        <img src="comment-light.81abc418.svg.png" style="margin-left: 76px;" alt="">12
+                    </div>
+
+                </div>
+            </div>
+            <div class="hew-mayag-box">
+                <div class="hew-mayag__image">
+                    <img src="https://mgl.gogo.mn/newsn/thumbnail/420/images/c/2024/06/319528-03062024-1717411688-1269157605-3c87b8aa-d29d-4ef0-8be5-930f9cbe14e9.jpg"
+                        alt="">
+                    <div class="hew-mayag__cover">Унших</div>
+                </div>
+                <div class="hew-mayag__post__item">
+                    <div class="hew-mayag__post__text">Дотоодын виртуал хөрөнгийн зах зээлийн үнэлгээ ₮168.7 тэрбум
+                        болж, өмнөх оны мөн үеэс 2.3 дахин буурав
+                    </div>
+                    <div class="hew-mayag__post__text__icon">
+                        <img src="Symbol.png" alt="">11
+                        <img src="comment-light.81abc418.svg.png" style="margin-left: 76px;" alt="">12
+                    </div>
+
+                </div>
+            </div>
+            <div class="hew-mayag-box">
+                <div class="hew-mayag__image">
+                    <img src="https://mgl.gogo.mn/newsn/thumbnail/420/images/c/2024/05/-21052024-1716258848-1172406503-f94064de-035e-4422-9376-2d2e0de9cb32.jpg"
+                        alt="">
+                    <div class="hew-mayag__cover">Унших</div>
+                </div>
+                <div class="hew-mayag__post__item">
+                    <div class="hew-mayag__post__text">“Microsoft”-ийн хиймэл оюунд суурилсан “Copilot+PC” нь “MacBook
+                        Air M3”-аас илүү хурдан
+                    </div>
+                    <div class="hew-mayag__post__text__icon">
+                        <img src="Symbol.png" alt="">11
+                        <img src="comment-light.81abc418.svg.png" style="margin-left: 76px;" alt="">12
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="komic">
+        <div class="komic-logo" style="width: 25px;height: 27px;">
+            <img src="https://mgl.gogo.mn//newsn/v4/images/comic.9afb6d5b.png" alt="">
+            <p>Комик</p>
+        </div>
+        <div class="komic-container">
+            <div class="komic-post">
+                <div class="komic-image">
+                    <img src="https://mgl.gogo.mn/newsn/thumbnail/1000/comic/2023/06/21/3773/comic-153411-688093610.jpeg"
+                        alt="">
+                    <div class="komic-image__cover">Унших</div>
+                </div>
+                <div class="komic-post__text">
+                    <div class="komic-post__title">Нэг өрөөнд хамт хэвтсэн энэ хэцүү хүний ДАТА ДУУСААСАЙ</div>
+                    <div class="komic-post__text__icon">
+                        <img src="Symbol.png" alt="">11
+                        <img src="comment-light.81abc418.svg.png" style="margin-left: 50px;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="komic-post">
+                <div class="komic-image">
+                    <img src="https://mgl.gogo.mn/newsn/thumbnail/1000/comic/2023/05/03/3772/hugjliin_bank-184555-1805228234.jpeg"
+                        alt="">
+                    <div class="komic-image__cover">Унших</div>
+                </div>
+                <div class="komic-post__text">
+                    <div class="komic-post__title">Хөгжлийн банкны шүүгдэгчдийн хөөрхийлөлтэй мэдүүлгүүд</div>
+                    <div class="komic-post__text__icon">
+                        <img src="Symbol.png" alt="">11
+                        <img src="comment-light.81abc418.svg.png" style="margin-left: 50px;" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="home-entertainment">
+        <div class="entertainment-container">
+            <div class="entertainment-logo">
+                <img src="https://mgl.gogo.mn//newsn/v4/images/play-btn.12e64771.svg" alt="">
+                <p class="entertainment-logo__text">Үзэх</p>
+            </div>
+            <div class="entertainment-post-box">
+                <div class="entertainment-post">
+                    <div class="entertainment-post__image">
+                        <img src="https://mgl.gogo.mn/newsn/thumbnail/420/images/c/2024/06/319780-11062024-1718076948-1138127456-metro.jpg"
+                            class="entertainment-post__image__img" alt="">
+                        <img src="https://mgl.gogo.mn//newsn/v4/images/video-icon.f8c9c67e.svg "
+                            class="entertainment-image__logo">
+                        <div class="entertainment-post__image__cover">Унших</div>
+                    </div>
+
+                    <div class="entertainment-post__title">Метро барих зөвлөх үйлчилгээг БНСУ-ын "Dohwa Engineering"
+                        компани үзүүлнэ</div>
+                    <div class="entertainment-post-icon">
+                        <div class="entertainment-post__icon">
+                            <img src="Symbol.png" alt="">
+                            <p>11</p>
+                        </div>
+                        <div class="entertainment-post__icon">
+                            <img src="comment-light.81abc418.svg.png" alt="">
+                            <p>24</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="entertainment-post">
+                    <div class="entertainment-post__image">
+                        <img src="https://mgl.gogo.mn/newsn/thumbnail/420/images/c/2024/02/316118-26022024-1708914001-1054332543-songuuli.jpeg"
+                            class="entertainment-post__image__img" alt="">
+                        <img src="https://mgl.gogo.mn//newsn/v4/images/live-icon.4c327f2a.svg"
+                            class="entertainment-image__logo">
+                        <div class="entertainment-post__image__cover">Унших</div>
+                    </div>
+
+                    <div class="entertainment-post__title">ХЭҮК: Сонгуулийн санал авах байрыг иргэдэд хүртээмжтэйгээр
+                        шийдвэрлэх шаардлагатай</div>
+                    <div class="entertainment-post-icon">
+                        <div class="entertainment-post__icon">
+                            <img src="Symbol.png" alt="">
+                            <p>11</p>
+                        </div>
+                        <div class="entertainment-post__icon">
+                            <img src="comment-light.81abc418.svg.png" alt="">
+                            <p>24</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="entertainment-post">
+                    <div class="entertainment-post__image">
+                        <img src="https://mgl.gogo.mn/newsn/thumbnail/420/np/2022/08/30/5185076/byambatsogt-161210-175055330011111.jpeg"
+                            class="entertainment-post__image__img" alt="">
+                        <img src="https://mgl.gogo.mn//newsn/v4/images/video-icon.f8c9c67e.svg "
+                            class="entertainment-image__logo">
+                        <div class="entertainment-post__image__cover">Унших</div>
+                    </div>
+
+                    <div class="entertainment-post__title">С.Бямбацогт: Бид малчдыг халамжилдаг, хайрладаг, одоо орлогыг
+                        нь нэммээр байна</div>
+                    <div class="entertainment-post-icon">
+                        <div class="entertainment-post__icon">
+                            <img src="Symbol.png" alt="">
+                            <p>11</p>
+                        </div>
+                        <div class="entertainment-post__icon">
+                            <img src="comment-light.81abc418.svg.png" alt="">
+                            <p>24</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="entertainment-post">
+                    <div class="entertainment-post__image">
+                        <img src="https://mgl.gogo.mn/newsn/thumbnail/420/images/c/2022/08/297386-29082022-1661782996-1859570830-chuulgan_erunhiisaid_oyunerdene_ihhurliinchuulgan_zandanshatar1.jpg"
+                            class="entertainment-post__image__img" alt="">
+                        <img src="https://mgl.gogo.mn//newsn/v4/images/live-icon.4c327f2a.svg"
+                            class="entertainment-image__logo">
+                        <div class="entertainment-post__image__cover">Унших</div>
+                    </div>
+
+                    <div class="entertainment-post__title">Чуулганы хаалтын өдөр 21 хууль, түүнийг дагалдуулсан 92
+                        хуулийн төслийг эцэслэн батална</div>
+                    <div class="entertainment-post-icon">
+                        <div class="entertainment-post__icon">
+                            <img src="Symbol.png" alt="">
+                            <p>11</p>
+                        </div>
+                        <div class="entertainment-post__icon">
+                            <img src="comment-light.81abc418.svg.png" alt="">
+                            <p>24</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="entertainment-post-box">
+                <div class="entertainment-post">
+                    <div class="entertainment-post__image">
+                        <img src="https://mgl.gogo.mn/newsn/thumbnail/420/images/c/2024/06/319672-11062024-1718070211-719243141-41.jpg"
+                            class="entertainment-post__image__img" alt="">
+                        <img src="https://mgl.gogo.mn//newsn/v4/images/video-icon.f8c9c67e.svg "
+                            class="entertainment-image__logo">
+                        <div class="entertainment-post__image__cover">Унших</div>
+                    </div>
+
+                    <div class="entertainment-post__title">35 ММ-ИЙН ДУРАНД: Улаанбаатар үзэсгэлэнтэй болчхож</div>
+                    <div class="entertainment-post-icon">
+                        <div class="entertainment-post__icon">
+                            <img src="Symbol.png" alt="">
+                            <p>11</p>
+                        </div>
+                        <div class="entertainment-post__icon">
+                            <img src="comment-light.81abc418.svg.png" alt="">
+                            <p>24</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="entertainment-post">
+                    <div class="entertainment-post__image">
+                        <img src="https://mgl.gogo.mn/newsn/thumbnail/420/images/c/2024/06/319762-10062024-1718020289-1785213743--10062024-1718006561-1643979575-441923985_1611441749647460_183513286690600197_n1.jpg"
+                            class="entertainment-post__image__img" alt="">
+                        <img src="https://mgl.gogo.mn//newsn/v4/images/live-icon.4c327f2a.svg"
+                            class="entertainment-image__logo">
+                        <div class="entertainment-post__image__cover">Унших</div>
+                    </div>
+
+                    <div class="entertainment-post__title">Сонгуулийн сурталчилгааны самбараас хүн бүр мэдээлэл авах
+                        БОЛОМЖГҮЙ байна</div>
+                    <div class="entertainment-post-icon">
+                        <div class="entertainment-post__icon">
+                            <img src="Symbol.png" alt="">
+                            <p>11</p>
+                        </div>
+                        <div class="entertainment-post__icon">
+                            <img src="comment-light.81abc418.svg.png" alt="">
+                            <p>24</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="entertainment-post">
+                    <div class="entertainment-post__image">
+                        <img src="https://mgl.gogo.mn/newsn/thumbnail/420/images/c/2024/05/318584-08052024-1715134983-1651528312-81.jpg"
+                            class="entertainment-post__image__img" alt="">
+                        <img src="https://mgl.gogo.mn//newsn/v4/images/video-icon.f8c9c67e.svg "
+                            class="entertainment-image__logo">
+                        <div class="entertainment-post__image__cover">Унших</div>
+                    </div>
+
+                    <div class="entertainment-post__title">35 ММ-ИЙН ДУРАНД: Хот нь цэвэрхэн, хүмүүс нь жаргалтай
+                        ЭРДЭНЭТ</div>
+                    <div class="entertainment-post-icon">
+                        <div class="entertainment-post__icon">
+                            <img src="Symbol.png" alt="">
+                            <p>11</p>
+                        </div>
+                        <div class="entertainment-post__icon">
+                            <img src="comment-light.81abc418.svg.png" alt="">
+                            <p>24</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="entertainment-post">
+                    <div class="entertainment-post__image">
+                        <img src="https://mgl.gogo.mn/newsn/thumbnail/420/images/c/2024/03/317046-22032024-1711113396-244989844-selbe1.jpg"
+                            class="entertainment-post__image__img" alt="">
+                        <img src="https://mgl.gogo.mn//newsn/v4/images/live-icon.4c327f2a.svg"
+                            class="entertainment-image__logo">
+                        <div class="entertainment-post__image__cover">Унших</div>
+                    </div>
+
+                    <div class="entertainment-post__title">ФОТО: Сэлбийн мөс эрчимтэй хайлж байна</div>
+                    <div class="entertainment-post-icon">
+                        <div class="entertainment-post__icon">
+                            <img src="Symbol.png" alt="">
+                            <p>11</p>
+                        </div>
+                        <div class="entertainment-post__icon">
+                            <img src="comment-light.81abc418.svg.png" alt="">
+                            <p>24</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section id="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="https://mgl.gogo.mn/newsn/v4/images/gogo-logo.345096b3.png" alt="">
+            </div>
+            <div>
+                <div class="footer-navigation">
+                    <div class="footer-navigation__box">
+                        <img src="https://mgl.gogo.mn/newsn/v4/images/tech.a4b28dbb.png" alt="">
+                        <p>Бидний тухай</p>
+                    </div>
+                    <div class="footer-navigation__box">
+                        <img src="https://mgl.gogo.mn/newsn/v4/images/surtalchilgaa.2f9ee07e.png" alt="">
+                        <p>Сурталчилгаа байршуулах</p>
+                    </div>
+                    <div class="footer-navigation__box">
+                        <img src="https://mgl.gogo.mn/newsn/v4/images/redakts.41ba2bab.png" alt="">
+                        <p>Редакцийн ёс зүй</p>
+                    </div>
+                    <div>
+                        <div class="footer-navigation__box">
+                            <img src="https://mgl.gogo.mn/newsn/v4/images/nuutslal.e823e529.png" alt="">
+                            <p>Нууцлалын бодлого</p>
+                        </div>
+                        <div class="holboo-barih">
+                            <img src="https://mgl.gogo.mn/newsn/v4/images/holboo.99f66db8.png" alt="">
+                            <p>Холбоо барих</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="separator">
+            <div class="separator__item">© 2007 - 2024 Монгол Контент ХХК   •   Бүх эрх хуулиар хамгаалагдсан</div>
+            <div class="separator__social">
+                <img src="fb-SVG.png" alt="">
+                <img src="x- SVG.png" alt="">
+                <img src="tube-SVG.png" alt="">
+                <img src="insta → SVG.png" alt="">
+            </div>
+        </div>
+    </section>
+</body>
+
 </html>
