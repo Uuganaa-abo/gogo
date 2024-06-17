@@ -1351,7 +1351,7 @@ section#home-entertainment {
     overflow: hidden;
 }
 
-.entertainment-post__image:hover {
+.entertainment-post__image:hover img{
     transform: scale(1.2);
 }
 
